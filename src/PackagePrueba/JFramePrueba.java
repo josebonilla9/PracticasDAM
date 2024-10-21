@@ -1,5 +1,7 @@
 package PackagePrueba;
 
+import java.beans.Expression;
+
 public class JFramePrueba extends javax.swing.JFrame {
 
     public JFramePrueba() {
@@ -38,6 +40,7 @@ public class JFramePrueba extends javax.swing.JFrame {
         barraWindows = new javax.swing.JPanel();
         botonCerrar = new javax.swing.JLabel();
         panelSalida = new javax.swing.JPanel();
+        textoSalida = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -349,7 +352,7 @@ public class JFramePrueba extends javax.swing.JFrame {
                                 .addComponent(botonResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(botonMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 6, Short.MAX_VALUE))
+                        .addGap(0, 36, Short.MAX_VALUE))
                     .addComponent(textoPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -367,7 +370,7 @@ public class JFramePrueba extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        panelPrincipal.add(panelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 650));
+        panelPrincipal.add(panelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 650));
 
         barraWindows.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -391,18 +394,26 @@ public class JFramePrueba extends javax.swing.JFrame {
 
         panelSalida.setBackground(new java.awt.Color(255, 255, 255));
 
+        textoSalida.setFont(new java.awt.Font("Roboto Light", 0, 48)); // NOI18N
+
         javax.swing.GroupLayout panelSalidaLayout = new javax.swing.GroupLayout(panelSalida);
         panelSalida.setLayout(panelSalidaLayout);
         panelSalidaLayout.setHorizontalGroup(
             panelSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGroup(panelSalidaLayout.createSequentialGroup()
+                .addGap(124, 124, 124)
+                .addComponent(textoSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         panelSalidaLayout.setVerticalGroup(
             panelSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGroup(panelSalidaLayout.createSequentialGroup()
+                .addGap(195, 195, 195)
+                .addComponent(textoSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(288, Short.MAX_VALUE))
         );
 
-        panelPrincipal.add(panelSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 760, 630));
+        panelPrincipal.add(panelSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, 730, 630));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -421,7 +432,8 @@ public class JFramePrueba extends javax.swing.JFrame {
     String textoEnPantalla = "";
     
     private void textoResultadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textoResultadoMouseClicked
-        
+          textoEnPantalla = textoEnPantalla.replace("x", "*");
+
     }//GEN-LAST:event_textoResultadoMouseClicked
 
     private void botonCeroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCeroMouseClicked
@@ -590,7 +602,6 @@ public class JFramePrueba extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel barraWindows;
     private javax.swing.JLabel botonCero;
-    private javax.swing.JPanel botonCero2;
     private javax.swing.JLabel botonCerrar;
     private javax.swing.JLabel botonCinco;
     private javax.swing.JLabel botonCuatro;
@@ -608,7 +619,6 @@ public class JFramePrueba extends javax.swing.JFrame {
     private javax.swing.JLabel botonSuma;
     private javax.swing.JLabel botonTres;
     private javax.swing.JLabel botonUno;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel panelBotones;
     private javax.swing.JPanel panelCalculadora;
     private javax.swing.JPanel panelPantalla;
@@ -618,5 +628,6 @@ public class JFramePrueba extends javax.swing.JFrame {
     private javax.swing.JLabel textoPantalla;
     private javax.swing.JLabel textoPrincipal;
     private javax.swing.JLabel textoResultado;
+    private javax.swing.JLabel textoSalida;
     // End of variables declaration//GEN-END:variables
 }
